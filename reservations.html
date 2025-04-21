@@ -1,0 +1,49 @@
+<!-- reservations.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>White Rock Club - Reservations</title>
+  <link rel="stylesheet" href="reservations.css">
+  <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/favicon.jpg" alt="White Rock Logo">
+      <span>White Rock</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reservations.html" class="active">Reservations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="reservations">
+    <h2>Make a Reservation</h2>
+    <form onsubmit="submitReservation(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="date" required />
+      <input type="number" placeholder="Number of People" required />
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 White Rock. All rights reserved.
+  </footer>
+
+  <script>
+    function submitReservation(e) {
+      e.preventDefault();
+      alert('Reservation submitted! We\'ll contact you soon.');
+    }
+  </script>
+</body>
+</html>

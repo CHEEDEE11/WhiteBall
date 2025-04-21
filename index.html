@@ -1,0 +1,92 @@
+<!-- Project Structure:
+
+/nightclub-website
+│
+├── index.html
+├── styles.css
+│
+├── gallery.html
+├── gallery.css
+│
+├── reservations.html
+├── reservations.css
+│
+└── contact.html
+    contact.css
+--> 
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>White Ball Club</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="images/favicon.jpg"  href="images/favicon.jpg">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/favicon.jpg" alt="White Ball Logo">
+      <span>White Ball</span>
+    </div>
+    
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>  
+  </header>
+
+  <section id="home">
+    <h1>Welcome to White Ball</h1>
+    <p>Experience the energy, music, and magic of unforgettable nights. Join us at White Ball – the pulse of the city after dark.</p>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://source.unsplash.com/200x200/?nightclub" alt="club scene" />
+      <img src="https://source.unsplash.com/201x200/?dj,party" alt="dj" />
+      <img src="https://source.unsplash.com/202x200/?club,lights" alt="lights" />
+      <img src="https://source.unsplash.com/203x200/?dance,club" alt="dance" />
+    </div>
+  </section>
+
+  <section id="reservations">
+    <h2>Reservations</h2>
+    <form onsubmit="submitReservation(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="date" required />
+      <input type="number" placeholder="Number of People" required />
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 White Ball. All rights reserved.
+  </footer>
+
+  <script>
+    function submitReservation(e) {
+      e.preventDefault();
+      alert('Reservation submitted! We\'ll contact you soon.');
+    }
+  </script>
+</body>
+</html>
