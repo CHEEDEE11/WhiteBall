@@ -150,3 +150,119 @@ footer {
   color: #12121c;
 }
 
+:root {
+  --primary-color: #12121c;
+  --accent-color: #e53935;       /* deep red */
+  --text-color: #f1f1f1;
+  --hover-color: #33334d;
+}
+
+/* smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* enlarge logo + name */
+.logo img {
+  height: 2.5rem;
+}
+.logo span {
+  font-size: 2rem;
+  color: var(--accent-color);
+}
+
+/* hero background */
+#home {
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('images/favicon.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#home h1 {
+  font-size: 3rem;
+  color: var(--accent-color);
+}
+
+
+/* HAMBURGER NAV + RESPONSIVE */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 0.3rem;
+}
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: var(--text-color);
+}
+
+/* hide nav by default on mobile */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  .hamburger {
+    display: flex;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: var(--primary-color);
+  }
+  nav ul.active {
+    display: flex;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+}
+
+/* bump up logo on really small screens */
+@media (max-width: 480px) {
+  .logo img {
+    height: 3rem;
+  }
+  .logo span {
+    font-size: 2.5rem;
+  }
+}
+
+/* BACK-TO-TOP BUTTON */
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: none;
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 0.6rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#back-to-top.show {
+  display: block;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}

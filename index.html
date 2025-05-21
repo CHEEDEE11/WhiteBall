@@ -1,21 +1,3 @@
-<!-- Project Structure:
-
-/nightclub-website
-│
-├── index.html
-├── styles.css
-│
-├── gallery.html
-├── gallery.css
-│
-├── reservations.html
-├── reservations.css
-│
-└── contact.html
-    contact.css
---> 
-
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,23 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>White Ball Club</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="images/favicon.jpg"  href="images/favicon.jpg">
+  
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="images/favicon.jpg" alt="White Ball Logo">
+      <img src="images/favicon.png" alt="White Ball Logo">
       <span>White Ball</span>
     </div>
-    
+  
+    <!-- hamburger for mobile -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  
     <nav>
-      <ul>
+      <ul id="nav-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="reservations.html">Reservations</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-    </nav>  
+    </nav>
   </header>
 
   <section id="home">
@@ -47,73 +34,30 @@
     <p>Experience the energy, music, and magic of unforgettable nights. Join us at White Ball – the pulse of the city after dark.</p>
   </section>
 
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="https://source.unsplash.com/200x200/?nightclub" alt="club scene" />
-      <img src="https://source.unsplash.com/201x200/?dj,party" alt="dj" />
-      <img src="https://source.unsplash.com/202x200/?club,lights" alt="lights" />
-      <img src="https://source.unsplash.com/203x200/?dance,club" alt="dance" />
-    </div>
-  </section>
+  <!-- (other sections go here…) -->
 
-  <section id="reservations">
-    <h2>Reservations</h2>
-    <form onsubmit="submitReservation(event)">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Email Address" required />
-      <input type="date" required />
-      <input type="number" placeholder="Number of People" required />
-      <button type="submit">Book Now</button>
-    </form>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Email" required />
-      <textarea rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
   <footer>
-     <!-- Phone number -->
-     <div class="footer-contact">
-      📞 <a href="tel:+2349161363936" style="color:inherit; text-decoration:none;">
-          +234 916 136 3936
-        </a>📞 <a href="tel:+2347019290880" style="color:inherit; text-decoration:none;">
-          +234 701 929 0880
-        </a>
-  </div>
-
-    <!-- Social links -->
-    <div class="footer-social">
-      <a href="mailto:whiteballabuja@gmail.com" target="_blank" rel="noopener">Gmail</a>
-      <a href="https://twitter.com/whiteballabuja" target="_blank" rel="noopener">Twitter</a>
-      <a href="https://instagram.com/whiteballabuja" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://facebook.com/whiteballabuja" target="_blank" rel="noopener">Facebook</a>
-      <a href="https://tiktok.com/@whiteballabuja" target="_blank" rel="noopener">TikTok</a>
+    <div class="footer-contact">
+      📞 <a href="tel:+2349161363936">+234 916 136 3936</a>
+      📞 <a href="tel:+2347019290880">+234 701 929 0880</a>
     </div>
-
-
-      <!-- Address -->
+    <div class="footer-social">
+      <a href="mailto:whiteballabuja@gmail.com">Gmail</a>
+      <a href="https://twitter.com/whiteballabuja" target="_blank">Twitter</a>
+      <a href="https://instagram.com/whiteballabuja" target="_blank">Instagram</a>
+      <a href="https://facebook.com/whiteballabuja" target="_blank">Facebook</a>
+      <a href="https://tiktok.com/@whiteballabuja" target="_blank">TikTok</a>
+    </div>
     <div class="footer-address">
-    📍 WhiteBall Lounge and Restaurant ltd,
-    Chocolate Mall, Off Ademola Adetokumbo Street
-    Wuse2 Abuja, Nigeria
-    </div>a\
-
-    <!-- Copyright -->
-    <div style="font-size:0.8rem;">&copy; 2025 White Ball. All rights reserved.</div>
+      📍 WhiteBall Lounge &amp; Restaurant Ltd,<br>
+      Chocolate Mall, Off Ademola Adetokunbo Street,<br>
+      Wuse II, Abuja, Nigeria
+    </div>
+    <div class="footer-copy">&copy; 2025 White Ball. All rights reserved.</div>
   </footer>
+  <button id="back-to-top" title="Back to top">↑</button>
 
-
-  <script>
-    function submitReservation(e) {
-      e.preventDefault();
-      alert('Reservation submitted! We\'ll contact you soon.');
-    }
-  </script>
+  <script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
